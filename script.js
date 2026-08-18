@@ -1,13 +1,32 @@
 let NUM_OF_ROWS = 40;
 let NUM_OF_COLUMNS = 40;
-let penColor = "black"
+let penColor = "#000000"
+let opacity = "FF"
+let opacityDecrease = true
 
 const mainContainer = document.querySelector(".main-container")
 
 const colorSelector = document.querySelector(".color-selector")
 colorSelector.addEventListener('change', (event) => {
-    penColor = event.target.value
+    if (event.target.value === "eraser") {
+            penColor = "#FFFFFF"}
+        else if (event.target.value === "red") {
+            penColor = "#FF0000"}
+        else if (event.target.value === "blue") {
+            penColor = "#0000FF"}
+        else if (event.target.value === "green") {
+            penColor = "#157d15"}
+        else if (event.target.value ==="rainbow") {
+            penColor = "rainbow"}
+        else {penColor = "#000000"}
+   
     console.log(penColor)
+})
+
+const opacitySelector = document.querySelector("#opacity")
+opacitySelector.addEventListener('input', (event) => {
+    opacity = Math.floor(event.target.value * 25.5).toString(16)
+    console.log(opacity)
 })
 
 const resetButton = document.querySelector(".reset-button")
@@ -41,7 +60,11 @@ const generateGrid = () => {
             pixel.style.display = "flex"
             pixel.style.flex = 1
             pixel.addEventListener("mouseenter", (event) => {
-                event.target.style.backgroundColor = penColor
+                if (penColor === "rainbow") {
+                    event.target.style.backgroundColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0') + opacity
+                } else {
+                event.target.style.backgroundColor = penColor + opacity
+                }
             })
             rowContainer.appendChild(pixel)
         }

@@ -14,10 +14,14 @@
         <option value="red">Red</option>
         <option value="blue">Blue</option>
         <option value="green">Green</option>
-        <option value="">Eraser</option>
+        <option value="rainbow">Rainbow</option>
+        <option value="eraser">Eraser</option>
     </select>
 
-    <label for="resolution">Select a Resolution (Between 20-100)</label>
+    <label for="opacity">Opacity (1-10)</label>
+    <input type="number" id="opacity" value="10" min="1" max="10">
+
+    <label for="resolution">Resolution (20-100)</label>
     <input type="number" id="resolution" value="40" min="20" max="100">
 
     <button class="reset-button">Reset</button>
