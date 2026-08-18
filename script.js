@@ -4,7 +4,7 @@ let penColor = "#000000"
 let opacity = "FF"
 let opacityDecrease = true
 
-const mainContainer = document.querySelector(".main-container")
+const screenContainer = document.querySelector(".screen-container")
 
 const colorSelector = document.querySelector(".color-selector")
 colorSelector.addEventListener('change', (event) => {
@@ -43,8 +43,8 @@ resolution.addEventListener('input', (event) => {
 })
 
 const generateGrid = () => {
-    while (mainContainer.firstChild) {
-        mainContainer.removeChild(mainContainer.firstChild);
+    while (screenContainer.firstChild) {
+        screenContainer.removeChild(screenContainer.firstChild);
     }
 
     for (i = 0; i < NUM_OF_ROWS; i++) {
@@ -69,7 +69,7 @@ const generateGrid = () => {
             rowContainer.appendChild(pixel)
         }
 
-        mainContainer.appendChild(rowContainer)
+        screenContainer.appendChild(rowContainer)
     }
 }
 

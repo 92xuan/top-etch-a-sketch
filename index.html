@@ -8,25 +8,33 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <label for="color-selector">Pen Color:</label>
-    <select class="color-selector">
-        <option value="black">Black</option>
-        <option value="red">Red</option>
-        <option value="blue">Blue</option>
-        <option value="green">Green</option>
-        <option value="rainbow">Rainbow</option>
-        <option value="eraser">Eraser</option>
-    </select>
+    <div class="main-container">
+        <div class="title">ETCH-A-SKETCH</div>
+        <div class="pen-container">
+            <label for="color-selector">Pen Color:</label>
+            <select class="color-selector">
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="rainbow">Rainbow</option>
+                <option value="eraser">Eraser</option>
+            </select>
 
-    <label for="opacity">Opacity (1-10)</label>
-    <input type="number" id="opacity" value="10" min="1" max="10">
+            <label for="opacity">Opacity (1-10)</label>
+            <input type="number" id="opacity" value="10" min="1" max="10">
+        </div>
 
-    <label for="resolution">Resolution (20-100)</label>
-    <input type="number" id="resolution" value="40" min="20" max="100">
+        <div class="resolution-container">
 
-    <button class="reset-button">Reset</button>
+            <label for="resolution">Resolution (20-100)</label>
+            <input type="number" id="resolution" value="40" min="20" max="100">
 
-    <div class="main-container"></div>
+            <button class="reset-button">Reset</button>
+        </div>
+
+        <div class="screen-container"></div>
+    </div>
     
 </body>
 </html>

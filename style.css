@@ -1,8 +1,53 @@
-.main-container {
+.screen-container {
     height: 500px;
     width: 500px;
     display: flex;
     border: solid;
     flex-direction: column;
     justify-content: space-evenly;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.main-container {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(232, 52, 52);
+    border-radius: 32px;
+    border: solid;
+    padding-bottom: 48px;
+    padding-top: 24px;
+    gap: 8px;
+}
+
+label {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.pen-container, .resolution-container {
+    background-color: rgb(250, 118, 118);
+    border-radius: 4px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    border-style: solid;
+    border-width: 1px;
+    gap: 4px;
+}
+
+.title {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 64px;
+    color: rgb(234, 234, 47);
+}
+
+input, select, button {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(67, 66, 66);
+    color: white
 }
